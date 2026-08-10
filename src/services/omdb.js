@@ -68,3 +68,27 @@ export const searchMovies = async (searchTerm) => {
     return [];
   }
 };
+
+
+export const searchMoviesById = async (searchTerm) => {
+    console.log(searchTerm)
+  try {
+    if (!searchTerm) {
+      return [];
+    }
+    // const formattedQuery = formatSearchTerm(searchTerm);
+    const response = await fetch(
+      `${BASE_URL}?i=${searchTerm}&apikey=${API_KEY}`
+    );
+    const data = await response.json();
+    if (data.Response === "True") {
+      console.log(data);
+      return data;
+    } else {
+      return [];
+    }
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};

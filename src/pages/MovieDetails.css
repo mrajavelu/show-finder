@@ -1,0 +1,160 @@
+.movie-details-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--color-white);
+}
+
+.back-btn-container {
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.movie-detail-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-dark-grey);
+  border: 1px solid var(--color-gold);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .movie-detail-card {
+    flex-direction: row;
+  }
+}
+
+.movie-detail-poster {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .movie-detail-poster {
+    width: 350px;
+  }
+}
+
+.movie-detail-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-detail-info {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.movie-detail-title {
+  color: var(--color-gold);
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.movie-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  align-items: center;
+}
+
+.meta-separator {
+  color: var(--color-gold);
+}
+
+.movie-detail-ratings {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.rating-score {
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+.rating-votes {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.movie-detail-crew p {
+  margin: 0.5rem 0;
+  color: var(--color-text-muted);
+}
+
+.movie-detail-crew strong {
+  color: var(--color-white);
+}
+
+.movie-detail-plot h3 {
+  color: var(--color-gold);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.movie-detail-plot p {
+  line-height: 1.6;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.movie-detail-extra p {
+  margin: 0.5rem 0;
+  color: var(--color-text-muted);
+}
+
+.movie-detail-extra strong {
+  color: var(--color-white);
+}
+
+.movie-detail-imdb {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.movie-detail-imdb span {
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.movie-detail-imdb a {
+  color: var(--color-black);
+  background-color: var(--color-gold);
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.movie-detail-imdb a:hover {
+  background-color: var(--color-white);
+  transform: translateY(-2px);
+}

@@ -1,9 +1,10 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
+
 function MovieCard({movie}) {
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate(`/movie`)
+        navigate(`/movie/${movie.imdbID}`)
     }
   return (
         <div className="movie-card" onClick={handleClick}>
