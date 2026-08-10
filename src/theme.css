@@ -1,0 +1,191 @@
+:root {
+  --color-gold: #FFD700;
+  --color-black: #111111;
+  --color-dark-grey: #222222;
+  --color-white: #FFFFFF;
+  --color-text-muted: #CCCCCC;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.NavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-dark-grey);
+  border-bottom: 2px solid var(--color-gold);
+}
+
+.navbar-logo img {
+  display: block;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-gold);
+  border-radius: 4px 0 0 4px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  outline: none;
+}
+
+.search-bar .search-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-gold);
+  border-left: none;
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-bar .search-btn::before {
+  content: 'Search';
+}
+
+.fav-btn {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.fav-btn:hover {
+  color: var(--color-white);
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.section-title h2 {
+  color: var(--color-gold);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.loading, .no-results {
+  text-align: center;
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+/* Movie Grid Styles */
+.movie-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Movie Card Styles */
+.movie-card {
+  background-color: var(--color-dark-grey);
+  border: 1px solid var(--color-gold);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.movie-poster {
+  margin: 0;
+  width: 100%;
+  height: 300px; /* Fixed height for consistency */
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.movie-title {
+  color: var(--color-gold);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.movie-details {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.movie-rating {
+  color: var(--color-white);
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+}
+
+.btn-details {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: auto; /* Push button to the bottom */
+  transition: background-color 0.2s;
+}
+
+.btn-details:hover {
+  background-color: var(--color-white);
+}
+
+/* Footer Styles */
+.app-container > div:last-child {
+  background-color: var(--color-dark-grey);
+  border-top: 2px solid var(--color-gold);
+  padding: 1rem;
+  color: var(--color-gold);
+}
+
+.app-container > div:last-child a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.app-container > div:last-child a:hover {
+  text-decoration: underline;
+}
