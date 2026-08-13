@@ -47,7 +47,7 @@ function MovieDetails() {
           </div>
 
           <div className="movie-detail-ratings">
-            <span className="rating-score">⭐ {movie.imdbRating}</span>
+            <span className="rating-score"> {movie.imdbRating} ⭐ </span>
             <span className="rating-votes">({movie.imdbVotes} votes)</span>
           </div>
 

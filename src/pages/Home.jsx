@@ -47,9 +47,9 @@ function Home() {
                 {/* Show "Popular Movies" heading only when NOT searching and movies exist */}
                 {!loading && movies.length > 0 && (
                 <div className="section-title">
-                    {
-                        searchQuery? `Result for Ypur search  ${searchQuery} `: `Popular Movies`
-                    }
+                    <h2>
+                        {searchQuery ? `Result for Your search: ${searchQuery}` : `Popular Movies`}
+                    </h2>
                 </div>
                 )}
                 {/* Display movie grid with current movies (default or search results) */}
