@@ -20,6 +20,7 @@ function MovieCard({ movie }) {
     }
   };
   const handleCardClick = () => {
+    (e) => e.stopPropagation()
     navigate(`/movie/${movie.imdbID}`);
   };
   return (
@@ -58,7 +59,7 @@ function MovieCard({ movie }) {
         </p>
         <p className="movie-rating">{movie.imdbRating}</p>
         {/* Fixed: e.stopPropagation() is the correct method name to stop events from bubbling up. */}
-        <button className="btn-details" onClick={(e) => e.stopPropagation()}>
+        <button className="btn-details" onClick={handleCardClick}>
           View Details
         </button>
       </div>

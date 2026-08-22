@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import MovieCard from '../MovieCard/MovieCard';
 import { getDefaultMovies } from '../../services/omdb';
 function MovieGrid({movies}) {
-    console.log(`The type of move is ${typeof(movies)}`);
-    console.log(movies)
 //     const movie = [
 //     {
 //         id: 1,

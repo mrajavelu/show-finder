@@ -23,7 +23,6 @@ function Home() {
     }
 
     const handleSearch = async (query) => {
-        console.log("Entered handle search on on home component")
         if (!query.trim()){
             await loadDefaultMovies();
             return
